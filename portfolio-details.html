@@ -27,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- =======================================================
   * Template Name: Gp
@@ -35,6 +36,24 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+  $.ajax({
+  url: 'http://localhost:1337/api/portfolios',
+  method: 'GET',
+  success: function(data) {
+    // Process the retrieved data
+    // Pass the data to a function to display it in the HTML
+    // console.log(data.data);
+    var response = data.data;
+    displayData(response);
+  },
+  error: function(error) {
+    console.error('Error:', error);
+  }
+});
+    })
+  </script>
 </head>
 
 <body>
@@ -49,34 +68,18 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto active" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="about.html">About</a></li>
+          <li><a class="nav-link scrollto" href="service.html">Services</a></li>
+          <li><a class="nav-link scrollto active" href="#">Showcase</a></li>
+          <li><a class="nav-link scrollto " href="career.html">Carrer</a></li>
+          <li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="contactus.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav><<!-- .navbar -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
 
     </div>
   </header><!-- End Header -->
@@ -109,16 +112,16 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                  <img src="assets/img/portfolio/zoningo.png" alt="">
                 </div>
 
-                <div class="swiper-slide">
+               <!--  <div class="swiper-slide">
                   <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
-                </div>
+                </div> -->
 
               </div>
               <div class="swiper-pagination"></div>
@@ -130,15 +133,15 @@
               <h3>Project information</h3>
               <ul>
                 <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Client</strong>: Derek Lester</li>
+                <!-- <li><strong>Project date</strong>: 01 March, 2022</li> -->
+                <li><strong>Project URL</strong>: <a href="#">www.zoningo.com</a></li>
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Zoningo</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                Zoningo is a music distribution company that helps independent artists get their music heard.It  is a great option for independent artists who want to get their music heard without the hassle of dealing with multiple distributors.
               </p>
             </div>
           </div>
@@ -158,19 +161,18 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Gp<span>.</span></h3>
+              <h3>VinayakTech<span>.</span></h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                plot No 260/2 Suryanarayan Society<br>
+                Sector 25,Gandhinagar<br><br>
+                <strong>Phone:</strong>+91 7069708701<br>
+                <strong>Email:</strong> vinayakTechnosolution@gmail.com<br>
               </p>
               <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://twitter.com/HeenaPa05182572?t=gc6N00M2tHX8abPdzkvd0g&s=08"><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href="https://instagram.com/vinayaktechnosolution?igshid=MzNlNGNkZWQ4Mg=="><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/company/vinayak-technosolution/"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -178,30 +180,30 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="portfolio-details.html">Portfolio</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">custom software development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Website Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">Mobile App Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">IT Consulting</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">E-commerce Solution</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="service.html">IT Project Management</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Stay updated with regular articles, blogs and announcements from Vinayak Technosolution</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Submit">
             </form>
 
           </div>
@@ -212,14 +214,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        &copy; Copyright <strong><span>VinayakTechnosolution</span></strong>. All Rights Reserved
       </div>
     </div>
   </footer><!-- End Footer -->
